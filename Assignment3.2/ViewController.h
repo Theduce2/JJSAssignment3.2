@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <NSURLConnectionDelegate>
+
+@property (nonatomic,weak) IBOutlet UITextField *urlField;
+@property (nonatomic,weak) IBOutlet UITextView *urlContent;
+@property (nonatomic,weak) IBOutlet UIButton *goButton;
+
+-(IBAction)loadURL:(id)sender;
+
+
+
 
 
 @end
